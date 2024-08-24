@@ -1,64 +1,56 @@
 ---
-
-Moduli
-
-1. Coda
-2. Centro
-3. Tetto Anteriore
-4. Base Anteriore
----
-
+Modulo: Coda
 Componenti Necessari: Coda
 
 1. Giallo Doppio
-2. Verde Arrotondato
+2. Verde Tondeggiante
 
 Fase 1: Assemblaggio della Coda 
 
-1. Installazione del Verde Arrotondato: Fissare il pezzo Verde Arrotondato sulla parte superiore del pezzo Giallo Doppio.
----
+1. Installazione del Verde Tondeggiante: Fissare il pezzo Verde Tondeggiante sulla parte superiore del pezzo Giallo Doppio, sovrapponendo i due agganci inferiori della parte arrotondata del pezzo verde agli agganci superiori del pezzo giallo. 
 
+---
+Modulo: Centro
 Componenti Necessari: Centro 
-1. 2 Rossi Quadrati
-2. Celeste Grande
-3. 2 Gialli Doppi
+1. 4 Rosso Doppio
+2. 2 Celeste Grande
+3. 2 Giallo Doppio
 
 Fase 2: Assemblaggio del Centro
 
-1. Installazione dei 2 Rossi Quadrati: Posizionare i 2 Rossi Quadrati uno accanto all'altro.
-2. Installazione del Celeste Grande: Fissare il Celeste Grande sopra i 2 Rossi Quadrati per collegare insieme i tre componenti.
-3. Installazione del Primo Giallo Doppio: Fissare il primo Giallo Doppio in posizione verticale sui secondi agganci del pezzo Celeste a partire da destra.
-4. Installazione del Secondo Giallo Doppio: Fissare il secondo Giallo Doppio in posizione verticale sui terzi agganci del pezzo Celeste a partire da destra.
+1. Installazione dei 2 Rosso Doppio: Posizionare i due Rosso Doppio uno accanto all'altro, adiacenti sul lato corto.
+2. Installazione del Celeste Grande: Fissare il Celeste Grande sopra i due pezzi rossi per collegare insieme i tre componenti.
+3. Installazione secondo sottoassieme: Ripetere le operazioni eseguite di sopra per gli altri due pezzi Rosso Doppio ed il pezzo Celeste Grande, successivamente posizionare questo secondo sottoassieme di fianco al primo, in modo tale che siano adiacenti sul lato lungo. 
+4. Installazione del primo Giallo Doppio: Fissare il primo Giallo Doppio in posizione trasversale rispetto ai sottoassiemi finora ottenuti dai pezzi rossi e celesti per unirli, ponendogli agganci inferiori del pezzo giallo sui secondi agganci superiori di entrambi i sottoassiemi.
+5. Installazione del secondo Giallo Doppio: Fissare il secondo Giallo Doppio similmente a come fatto per il precedente, stavolta sui terzi agganci superiori dei due sottoassiemi sopracitati.
 ---
-
-Componenti Necessari: Tetto Anteriore
-1. 2 Rossi Tondeggianti
-2. Rosso Doppio
+Modulo: Tetto
+Componenti Necessari: Tetto 
+1. 2 Rosso Tondeggiante
+2. Rosso Doppio 
 3. Celeste Unico
 
-Fase 3: Assemblaggio del Tetto Anteriore
+Fase 3: Assemblaggio del Tetto 
 
-1.Installazione dei 2 Rossi Tondeggianti: Posizionare i 2 Rossi Tondeggianti uno accanto all'altro lungo la lunghezza.
-2.Installazione del Rosso Doppio: Fissare il Rosso Doppio sopra i 2 Rossi Tondeggianti per collegare insieme i tre componenti.
-3.Installazione del Celeste Unico: Fissare il Celeste Unico sul secondo aggancio del pezzo Rosso Doppio a partire da destra.
+1.Installazione dei 2 Rosso Tondeggiante: Posizionare i 2 Rosso Tondeggiante uno accanto all'altro lungo la lunghezza, ovvero nell'unico modo che rende possibile la fase successiva.
+2.Installazione del Rosso Doppio: Fissare il Rosso Doppio sopra i 2 Rosso Tondeggiante per collegare insieme i tre componenti.
+3.Installazione del Celeste Unico: Fissare il Celeste Unico su un aggancio superiore a scelta del Rosso Doppio.
 ---
-
+Modulo: Base Anteriore
 Componenti Necessari: Base Anteriore
-1. 2 Arancioni Punta
+1. 2 Arancione Punta
 2. Blu Quadrato
 
 Fase 4: Assemblaggio della Base Anteriore
-1.Installazione dei 2 Arancioni Punta: Posizionare i 2 Arancioni Punta uno accanto all'altro lungo la lunghezza.
-2.Installazione del Blu Quadrato: Fissare i primi due fori del Blu Quadrato a partire da destra sopra i 2 Arancioni Punta per collegare insieme i tre componenti.
+1.Installazione dei 2 Arancione Punta: Posizionare i 2 Arancione Punta uno accanto all'altro lungo la lunghezza.
+2.Installazione del Blu Quadrato: Fissare due agganci inferiori del pezzo Blu Quadrato su due agganci superiori dei due pezzi arancione per collegare insieme i tre componenti, lasciando liberi due agganci inferiori del pezzo Blu Quadrato, che dovranno poi essere sovrapposti a parte del centro nell'assemblaggio finale. 
 ---
-
+Modulo: Assemblaggio finale 
 Fase 5: Assemblaggio Finale dei Moduli
 
-1.Collegamento della Coda al Centro: Fissare il modulo Coda al modulo Centro posizionando i fori del pezzo Verde della Coda su uno dei due agganci liberi del pezzo Celeste del Centro.
-2. Collegamento della Base Anteriore: Fissare i fori del pezzo Blu Quadrato della Base Anteriore sugli agganci liberi del pezzo Celeste del modulo precedentemente assemblato.
-3.Collegamento del Tetto Anteriore: Fissare il Tetto Anteriore alla Base composta dai due pezzi Rossi Tondeggianti sul Blu Quadrato del modulo precedentemente assemblato.
-
-
+1.Collegamento della Coda al Centro: Fissare il modulo Coda al modulo Centro posizionando gli agganci inferiori liberi del pezzo Verde Tondeggiante della Coda su una delle coppie libere degli agganci superiori dei pezzi celesti del centro. 
+2.Collegamento della Base Anteriore: Fissare gli agganci inferiori liberi del pezzo Blu Quadrato della Base Anteriore sugli agganci superiori della seconda coppia di agganci rimasta libera dopo il passaggio precedente.
+3.Collegamento del Tetto: Fissare gli agganci inferiori del Tetto agli agganci superiori del pezzo Blu Quadrato del modulo ottenuto al passaggio precedente facendo attenzione alle due seguenti condizioni: 1) i 2 pezzi Rosso Tondeggiante devono essere collocati in posizione trasversale rispetto alla lunghezza del treno, come fatto prima con i pezzi Giallo Doppio; 2) agganciare il tetto tenendo conto che il pezzo Celeste Unico deve trovarsi nel lato orientato al centro del treno e non in quello orientato verso la sua punta.
 
 
 
