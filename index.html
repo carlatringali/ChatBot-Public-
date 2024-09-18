@@ -7,42 +7,12 @@
 </head>
 <body>
     <h1>Scansiona il Trenino</h1>
-    <input type="file" accept="image/*" capture="camera" id="cameraInput">
-    <button onclick="sendToRoboflow()">Invia a Roboflow</button>
+    <!-- Form per caricare la foto e inviare al server Flask tramite Ngrok -->
+    <form action="https://7a14-35-197-141-101.ngrok-free.app/predict" method="POST" enctype="multipart/form-data">
+        <input type="file" accept="image/*" capture="camera" id="cameraInput" name="file">
+        <button type="submit">Invia l'immagine</button>
+    </form>
 
-    <script>
-        let selectedFile;
-
-        document.getElementById("cameraInput").addEventListener("change", function(event) {
-            selectedFile = event.target.files[0];
-        });
-
-        async function sendToRoboflow() {
-            if (!selectedFile) {
-                alert("Scatta prima una foto!");
-                return;
-            }
-
-            const formData = new FormData();
-            formData.append("file", selectedFile);
-
-            // Sostituisci con la tua API Key e il modello di Roboflow
-            const apiKey = "YOUR_API_KEY";
-            const modelEndpoint = "https://detect.roboflow.com/YOUR_MODEL_NAME?api_key=" + apiKey;
-
-            try {
-                const response = await fetch(modelEndpoint, {
-                    method: "POST",
-                    body: formData,
-                });
-                const result = await response.json();
-                console.log(result);
-                alert("Rilevamento completato: " + JSON.stringify(result));
-            } catch (error) {
-                console.error("Errore durante l'invio", error);
-                alert("Errore durante l'invio dell'immagine!");
-            }
-        }
-    </script>
+    <!-- Non serve più lo script JavaScript per Roboflow, ora usiamo il form HTML -->
 </body>
 </html>
