@@ -1,0 +1,89 @@
+#PROVA 3
+import cv2
+import supervision as sv
+from ultralytics import YOLO
+
+# Carica il modello YOLOv10 addestrato
+model = YOLO('best-6.pt')
+
+cap = cv2.VideoCapture(0)
+
+# Inizializza gli annotatori per bounding box e label
+bounding_box_annotator = sv.BoundingBoxAnnotator()
+label_annotator = sv.LabelAnnotator()
+
+if not cap.isOpened():
+    print('Unable to read camera feed')
+
+img_counter = 0 
+
+# Funzione per applicare la logica di controllo
+def apply_logic(detections, class_names):
+    # Lista per memorizzare i nomi degli oggetti rilevati
+    detected_objects = [class_names[int(detection[5])] for detection in detections]
+
+    # Debug: stampa tutti gli oggetti rilevati nel frame
+    print(f"Oggetti rilevati: {detected_objects}")
+
+    # Definire i nomi degli oggetti relativi al treno e ai pezzi
+    train_name = "TRENO ARANCIONE"
+    piece_names = [
+        "Arancione", "Blu Quadrato", "Celeste Unico", "Celeste Lungo", 
+        "Giallo Doppio", "Rosso Doppio", "Rosso Tondeggiante", "Verde Tondeggiante"
+    ]
+
+    # Logica per riconoscere il treno solo se tutti i pezzi sono presenti e nessun pezzo extra è presente
+    if all(piece in detected_objects for piece in piece_names) and len(detected_objects) == len(piece_names):
+        detected_objects.append(train_name)
+    else:
+        # Se mancano pezzi o ce ne sono di troppo, rimuovi l'etichetta del treno
+        if train_name in detected_objects:
+            detected_objects.remove(train_name)
+        print("Il treno non è completo o ci sono pezzi extra. Non riconosciuto come treno intero.")
+
+    # Restituisci gli oggetti rilevati dopo la logica di controllo
+    return detected_objects
+
+# Loop per la lettura della videocamera
+while True: 
+    ret, frame = cap.read()
+
+    if not ret: 
+        break
+
+    # Effettua il rilevamento degli oggetti
+    results = model(frame)[0]
+    
+    # Estrai le classi degli oggetti
+    class_names = model.names
+
+    # Converti i risultati di Ultralytics in supervision Detections
+    detections = results.boxes.data  # Prende i risultati della detection
+
+    # Applica la logica di controllo ai risultati
+    filtered_objects = apply_logic(detections, class_names)
+
+    # Debug: stampa gli oggetti filtrati che passano la logica
+    print(f"Oggetti filtrati: {filtered_objects}")
+
+    # Creare un array filtrato per annotare solo i pezzi validi (senza il treno)
+    filtered_detections = [detection for detection in detections if class_names[int(detection[5])] in filtered_objects]
+
+    # Annotazione del frame con bounding box e label filtrati
+    annotated_image = bounding_box_annotator.annotate(
+        scene=frame, detections=sv.Detections.from_ultralytics(results))
+    annotated_image = label_annotator.annotate(
+        scene=annotated_image, detections=sv.Detections.from_ultralytics(results))
+
+    # Mostra il frame annotato
+    cv2.imshow('Webcam', annotated_image)
+
+    k = cv2.waitKey(1)
+
+    # Se si preme ESC (tasto 27), esci
+    if k % 256 == 27:
+        print("Escape hit, closing...")
+        break
+    
+cap.release()
+cv2.destroyAllWindows()
