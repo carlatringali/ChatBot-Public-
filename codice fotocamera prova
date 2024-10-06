@@ -1,3 +1,9 @@
+codice PROVA3 è quello semplice solo con apertura fotocamera 
+codice PROVA CON BEST 7 (riga 100) codice con logica per riconoscere pezzi mancanti
+
+
+
+
 #PROVA 3
 import cv2
 import supervision as sv
@@ -74,6 +80,96 @@ while True:
         scene=frame, detections=sv.Detections.from_ultralytics(results))
     annotated_image = label_annotator.annotate(
         scene=annotated_image, detections=sv.Detections.from_ultralytics(results))
+
+    # Mostra il frame annotato
+    cv2.imshow('Webcam', annotated_image)
+
+    k = cv2.waitKey(1)
+
+    # Se si preme ESC (tasto 27), esci
+    if k % 256 == 27:
+        print("Escape hit, closing...")
+        break
+    
+cap.release()
+cv2.destroyAllWindows()
+
+
+
+
+#PROVA CON BEST7
+import cv2
+import supervision as sv
+from ultralytics import YOLO
+
+# Carica il modello YOLOv8 addestrato con il nuovo dataset
+model = YOLO('best-7.pt')
+
+# Inizializza la videocamera
+cap = cv2.VideoCapture(0)
+
+# Inizializza gli annotatori per bounding box e label
+bounding_box_annotator = sv.BoundingBoxAnnotator()
+label_annotator = sv.LabelAnnotator()
+
+if not cap.isOpened():
+    print('Unable to read camera feed')
+
+# Funzione per il controllo qualità
+def quality_check(detections, class_names):
+    detected_objects = [class_names[int(detection[5])] for detection in detections]
+
+    # Definire i pezzi necessari per il treno completo
+    required_pieces = [
+        "Arancione", "Blu Quadrato", "Celeste Unico", "Celeste Lungo", 
+        "Giallo Doppio", "Rosso Doppio", "Rosso Tondeggiante", "Verde Tondeggiante"
+    ]
+    
+    # Verifica se tutti i pezzi necessari sono presenti
+    missing_pieces = [piece for piece in required_pieces if piece not in detected_objects]
+    extra_pieces = [piece for piece in detected_objects if piece not in required_pieces]
+    
+    # Controllo della presenza
+    if missing_pieces:
+        message = f"Pezzi mancanti: {', '.join(missing_pieces)}"
+    elif extra_pieces:
+        message = f"Pezzi extra: {', '.join(extra_pieces)}"
+    else:
+        message = "Treno assemblato correttamente."
+
+    return message
+
+# Funzione per visualizzare messaggi sul frame
+def display_message(frame, message, position=(50, 50), color=(0, 0, 255)):
+    cv2.putText(frame, message, position, cv2.FONT_HERSHEY_SIMPLEX, 1, color, 2)
+
+# Loop per la lettura della videocamera
+while True: 
+    ret, frame = cap.read()
+
+    if not ret: 
+        break
+
+    # Effettua il rilevamento degli oggetti
+    results = model(frame)[0]
+    
+    # Estrai le classi degli oggetti
+    class_names = model.names
+
+    # Converti i risultati di Ultralytics in supervision Detections
+    detections = results.boxes.data  # Prende i risultati della detection
+
+    # Esegui il controllo qualità e ottieni il messaggio da visualizzare
+    quality_message = quality_check(detections, class_names)
+
+    # Annotazione del frame con bounding box e label
+    annotated_image = bounding_box_annotator.annotate(
+        scene=frame, detections=sv.Detections.from_ultralytics(results))
+    annotated_image = label_annotator.annotate(
+        scene=annotated_image, detections=sv.Detections.from_ultralytics(results))
+
+    # Visualizza il messaggio sul frame
+    display_message(annotated_image, quality_message)
 
     # Mostra il frame annotato
     cv2.imshow('Webcam', annotated_image)
