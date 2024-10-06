@@ -1,0 +1,31 @@
+# Installare le librerie necessarie
+!pip install roboflow
+!pip install ultralytics
+
+# Codice per scaricare il dataset da Roboflow
+!pip install roboflow
+
+from roboflow import Roboflow
+rf = Roboflow(api_key="57PHtREnPUoyrUdfLenU")
+project = rf.workspace("progetto-smart-factory").project("trenini")
+version = project.version(4)
+dataset = version.download("yolov8")
+
+#inseire i percorcorsi corretti di test, train e valid su sul file data.yaml e salvare
+
+# Addestrare il modello YOLOv8
+from ultralytics import YOLO
+
+# Caricare il modello pre-addestrato YOLOv8 (nano, s, m, l, x a seconda delle risorse)
+model = YOLO("yolov8n.pt")  # YOLOv8 Nano per velocità, puoi scegliere altri modelli
+
+# Addestrare il modello con il dataset scaricato da Roboflow
+results = model.train(data=dataset.location + "/data.yaml", epochs=100, imgsz=640, batch=8)
+
+# Valutare il modello addestrato
+results = model.val()
+
+# Salvare il modello addestrato
+model.save("yolov8_trained_model.pt")
+
+#prendere il file best. da train--> weights 
