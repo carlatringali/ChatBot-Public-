@@ -1,0 +1,46 @@
+Manuale di Assemblaggio del Treno Arancio
+
+Moduli del Treno Arancio:
+Modulo 1 Coda
+Modulo 2 Centro
+Modulo 3 Tetto
+Modulo 4 Base Anteriore
+
+Materiali Necessari per l'Assemblaggio del Treno Arancio:
+Materiali necessari modulo Coda:
+1 pezzo Giallo Doppio
+1 pezzo Verde Tondeggiante
+Materiali necessari modulo Centro:
+4 pezzi Rosso Doppio
+2 pezzi Celeste Grande
+2 pezzi Giallo Doppio
+Materiali necessari modulo Tettp:
+2 pezzi Rosso Tondeggiante
+1 pezzo Rosso Doppio
+1 pezzo Celeste Unico
+Materiali necessari modulo Base Anteriore:
+2 pezzi Arancione Punta
+1 pezzo Blu Quadrato
+
+Istruzioni prodotto 2: Assemblaggio Treno Arancio
+Fase 1: Assemblaggio del Modulo Coda
+Fissare il pezzo Verde Tondeggiante sopra il Giallo Doppio, sovrapponendo gli agganci inferiori della parte tondeggiante agli agganci superiori del pezzo Giallo.
+
+Fase 2: Assemblaggio del Modulo Centro
+Posizionare i 2 pezzi Rosso Doppio uno accanto all'altro e fissare sopra di essi un pezzo Celeste Grande creando un parallelepipedo.
+Ripetere la stessa operazione per gli altri 2 pezzi Rosso Doppio e il secondo pezzo Celeste Grande.
+Fissare i 2 pezzi Giallo Doppio trasversalmente sugli agganci centrali superiori dei sottoassiemi ottenuti per collegarli.
+
+Fase 3: Assemblaggio del Modulo Tetto
+Posizionare i 2 pezzi Rosso Tondeggiante uno accanto all'altro.
+Fissare sopra di essi il pezzo Rosso Doppio, seguito dal pezzo Celeste Unico su un aggancio superiore.
+
+Fase 4: Assemblaggio del Modulo Base Anteriore
+Posizionare i 2 pezzi Arancione Punta uno accanto all'altro.
+Fissare sopra di essi il pezzo Blu Quadrato, lasciando liberi gli agganci inferiori del pezzo Blu.
+
+Fase 5: Assemblaggio Finale 
+Fissare la Coda al Centro, posizionando il pezzo Verde Tondeggiante sugli agganci superiori liberi dei pezzi Celeste.
+Fissare la Base Anteriore al Centro collegandola tramite gli agganci liberi del pezzo Blu Quadrato.
+Fissare il Tetto alla Base Anteriore, facendo attenzione all'orientamento dei pezzi: il pezzo Celeste deve essere orientato verso il Centro.
+Assicurarsi che tutti i componenti siano fissati correttamente e che non ci siano parti mancanti. Procedere con la verifica di qualità tramite computer vision.

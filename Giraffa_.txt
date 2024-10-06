@@ -1,0 +1,33 @@
+Manuale di Assemblaggio della Giraffa
+
+Moduli della Giraffa:
+Modulo 1: "Corpo"
+Modulo 2 "Zampe"
+Modulo 3 "Collo e Testa"
+
+Materiali Necessari per l'Assemblaggio della Giraffa:
+Materiali necessari per il modulo Corpo:
+2 pezzi Verde Grande
+2 pezzi Celeste Triplo
+Materiali necessari per il modulo Zampe:
+8 pezzi Blu Unico
+Materiali necessari per il modulo Collo e Testa:
+3 pezzi Blu Unico (aggiuntivi)
+1 pezzo Arancione Punta
+
+Fase 1: Assemblaggio del Modulo Corpo 
+Predisporre i 2 pezzi Verde Grande, posizionandoli in modo parallelo e distanziati.
+Sovrapporre i 2 pezzi Celeste Triplo sui due agganci esterni dei pezzi Verde, unendo le estremità.
+
+Fase 2: Assemblaggio del Modulo Zampe 
+Prendere 2 pezzi Blu Unico e sovrapporli per formare una zampa.
+Ripetere altre tre volte per ottenere quattro zampe in totale.
+
+Fase 3: Assemblaggio del Modulo Collo e della Testa 
+Fissare 3 pezzi Blu Unico uno sopra l'altro per creare il collo.
+Fissare il pezzo Arancione Punta all'aggancio superiore del collo.
+
+Fase 4: Assemblaggio Finale 
+Fissare ogni Zampa agli agganci inferiori del corpo.
+Installare il Collo e la Testa sull'aggancio superiore del corpo, orientando la testa verso l'esterno.
+Assicurarsi che tutti i componenti siano fissati correttamente e che non ci siano parti mancanti. Procedere con la verifica di qualità tramite computer vision.
